@@ -1,4 +1,4 @@
-print("Welcome to The Game!")
+print("Welcome to The !")
 name=input("What's your name: ")
 age=input("Hello "+name+"  How old are you: ")
 def menu():
