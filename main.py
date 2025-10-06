@@ -1,8 +1,8 @@
-print("Welcome to The !")
+print("Welcome to the food divery service   !")
 name=input("What's your name: ")
 age=input("Hello "+name+"  How old are you: ")
 def menu():
-    print("Choose a setting:")
+    print("Choose a time to be pick up:")
     print("1")
     print("2")
     print("3")
