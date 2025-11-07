@@ -3,7 +3,7 @@ print("Welcome to the food delivery service   !")
 name=input("What's your name: ")
 age=input("Hello "+name+"  How old are you: ")
 
-#Give time for D
+#Give time for delivery
 def choose_time():
     print("Choose time:")
     print("1: 12:00 PM")
