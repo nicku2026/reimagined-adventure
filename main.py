@@ -1,9 +1,9 @@
-print("Welcome to the food divery service   !")
+print("Welcome to the food delivery service   !")
 # Get user details
 name=input("What's your name: ")
 age=input("Hello "+name+"  How old are you: ")
 
-#Give time fo
+#Give time for D
 def choose_time():
     print("Choose time:")
     print("1: 12:00 PM")
