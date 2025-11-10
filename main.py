@@ -17,7 +17,7 @@ def choose_time():
         print ("Synatax Error")
 time_choice = choose_time()
 # Order process
-order_list = ()
+order_list = []
 total = 0.0
 menu = {
     1: ("Big Burger", 7.99),
@@ -36,7 +36,7 @@ while True:
     elif choice.isdigit() and int(choice) in menu:
         item_name, item_price = menu[int(choice)]
         order_list.append(item_name)
-        total += item_price
+        total+= item_price
         print(item_name, "added")
     else:
         print("Invalid choice. Please try again.")
@@ -49,11 +49,11 @@ print("2. Picked up")
 method = input("Enter 1 or 2: ")
 
 if method == "1":
-    delivery_method = "Delivery"
+    delivery_method = ("Delivery")
     location= input ('Give your location for Drop off: ')
 else:
-    delivery_method = "Pickup"
-    location= (" in resturant")
+    delivery_method = ("Pickup")
+    location==("in resturant")
 
 # Summary
 print("Order Summary:")
