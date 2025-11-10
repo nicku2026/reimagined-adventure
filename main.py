@@ -57,7 +57,7 @@ if method == "1":
     location= input ('Give your location for Drop off: ')
 else:
     delivery_method = ("Pickup")
-    location=("in resturant")
+    location=(" in resturant")
 
 # Summary
 print("Order Summary:")
