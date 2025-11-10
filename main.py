@@ -12,7 +12,7 @@ def choose_time():
 choice = input("Enter 1, 2, or 3: ")
 
 
-if choice == ("1","2","3"):
+if choice in ("1","2","3"):
         print("Time selected Successful!")
 else:
     print ("Synatax Error")
@@ -20,6 +20,8 @@ return choice
 time_choice = choose_time()
 
 # Order process
+order_list = ()
+total = 0.0
 menu = {
     1: ("Big Burger", 7.99),
     2: ("Chicken Sandwich", 6.49),
@@ -29,23 +31,15 @@ menu = {
 }
 while True:
 choice = int(input("Enter the number of the item you'd like to order: "))
-if choice == "0":
+while True:
+    choice = input("Enter the number of the item you'd like to order (0 to finish): ")
+    if choice == ("0"):
         break
-    elif choice == "1":
-        order_list.append("Big Burger")
-        total += 7.99
-    elif choice == "2":
-        order_list.append("Chicken Sandwich")
-        total += 6.49
-    elif choice == "3":
-        order_list.append("Fries")
-        total += 2.99
-    elif choice == "4":
-        order_list.append("Soda")
-        total += 1.49
-    elif choice == "5":
-        order_list.append("Ice Cream")
-        total += 3.49
+    elif choice.isdigit() and int(choice) in menu:
+        item_name, item_price = menu (int(choice))
+        order_list.append(item_name)
+        total += item_price
+        print(item_name, "added to your order.")
     else:
         print("Invalid choice. Please try again.")
 
@@ -61,4 +55,13 @@ if method == "1":
 else:
     delivery_method = "Pickup"
 # Summary
+print("\nOrder Summary:")
+print("Name:", name)
+print("Age:", age)
+print("Delivery Time Option:", time_choice)
+print("Order Method:", delivery_method)
+print("Items Ordered:", ", ".join(order_list))
+print("Total: $", round(total, 2))
+print("Thank you for ordering!")
+
 
