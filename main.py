@@ -19,6 +19,8 @@ time_choice = choose_time()
 # Order process
 order_list = []
 total = 0.0
+
+
 menu = {
     1: ("Big Burger", 7.99),
     2: ("Chicken Sandwich", 6.49),
@@ -26,7 +28,8 @@ menu = {
     4: ("Soda", 1.49),
     5: ("Ice Cream", 3.49)
 }
-print(menu)
+for key, (item, price) in menu.items():
+    print(f"{key}. {item} - ${price:.2f}")
 
 while True:
     choice = int(input("Enter the number of the item you'd like to order: "))
@@ -53,13 +56,14 @@ if method == "1":
     location= input ('Give your location for Drop off: ')
 else:
     delivery_method = ("Pickup")
-    location==("in resturant")
+    location=("in resturant")
 
 # Summary
 print("Order Summary:")
 print("Name:", name)
 print("Age:", age)
 print("Delivery Time Option:", time_choice)
+print("Order Method:", f"{delivery_method} ({location})")
 print("Order Method:", delivery_method+location)
 print("Items Ordered:", ",".join(order_list))
 print("Total: $", round(total, 2))
